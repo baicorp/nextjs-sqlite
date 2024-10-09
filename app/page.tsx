@@ -1,8 +1,6 @@
-import { insertFood } from "@/actions/crud";
+import { getFood, insertFood } from "@/actions/crud";
 import DeleteBtn from "@/components/DeleteBtn";
 import SubmitBtn from "@/components/SubmitBtn";
-import { db } from "@/db/drizzle";
-import { foodTable } from "@/db/schema";
 
 export default async function Home() {
   return (
@@ -25,7 +23,7 @@ export default async function Home() {
 }
 
 async function ListMakanan() {
-  const foods = await db.select().from(foodTable);
+  const foods = await getFood();
   return (
     <div>
       <h2 className="font-bold text-4xl mb-4">List Makanan</h2>

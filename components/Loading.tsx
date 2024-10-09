@@ -6,13 +6,13 @@ export default function Loading() {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
         <circle
           transform="rotate(0)"
-          transform-origin="center"
+          // transformOrigin="center"
           fill="none"
           stroke="#000"
-          stroke-width="15"
-          stroke-linecap="round"
-          stroke-dasharray="230 1000"
-          stroke-dashoffset="0"
+          strokeWidth="15"
+          strokeLinecap="round"
+          strokeDasharray="230 1000"
+          strokeDashoffset="0"
           cx="100"
           cy="100"
           r="70"

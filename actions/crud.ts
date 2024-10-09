@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export async function getFood() {
-  const food = await db.select().from(foodTable);
+  const food = await db.select().from(foodTable).all();
   return food;
 }
 

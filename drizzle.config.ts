@@ -1,12 +1,13 @@
 import { defineConfig } from "drizzle-kit";
-import path from "path";
 
 export default defineConfig({
   schema: "./db/schema.ts", // Path schema file
   out: "./db/migrations", // Directory where migrations will be stored
-  dialect: "sqlite", // 'mysql' | 'postgres' | 'sqlite'
+  dialect: "sqlite",
+  driver: "turso",
   dbCredentials: {
-    url: "./db/database.sqlite", // Path to SQLite database if using SQLite locally
+    url: process.env.DATABASE_URL!,
+    authToken: process.env.DATABASE_AUTH_TOKEN!,
   },
   verbose: true,
   strict: true,
