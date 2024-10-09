@@ -4,7 +4,7 @@ import SubmitBtn from "@/components/SubmitBtn";
 
 export default async function Home() {
   return (
-    <div className="grid grid-cols-2 place-items-center min-h-screen p-8 pb-20 gap-10 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid md:grid-cols-2 place-items-center min-h-screen p-8 pb-20 gap-10 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <form className="flex flex-col gap-2" action={insertFood}>
         <div className="flex flex-col">
           <label htmlFor="food-name">Name of the food</label>
